@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title color="primary" text-center>
+            Bringing data from XYZ API
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6" *ngFor="let inst of instrumentos">
+                <ion-card (click)="makeSound(inst)" text-center>
+                    <ion-card-header>{{inst.name}}</ion-card-header>
+                    <ion-item>
+
+                        <ion-img [src]="inst.image"></ion-img>
+                    </ion-item>
+                </ion-card>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+</ion-content>
